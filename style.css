@@ -1,18 +1,13 @@
-
-
 .container {
   display: flex;
   justify-content: left;
   flex-flow: row wrap;
   z-index: 2;
-
   border: solid;
   border-color: black;
   width: 30em;
   margin-left: auto;
   margin-right: auto;
-  /* position: relative; */
-  
 }
 
 .overlay {
@@ -27,21 +22,15 @@
   width: 90px;
   overflow: hidden;
   opacity: 0;
-  /* -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-   user-select: none; */
 }
 
-#test {
+/* #test {
   position: absolute;
   left: 10;
   top: 10;
   z-index: -1;
   opacity: 0;
-}
+} */
 
 .rectangle {
   z-index: inherit;
@@ -49,15 +38,8 @@
   width: 6em;
   height: 6em;
   background: blue;
-  overflow: hidden;   /*adding for sliding effect*/
-  /* -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-   user-select: none; */
+  overflow: hidden;   
 }
-
 
 .pictures {
   display: flex;
@@ -73,15 +55,11 @@
 
 .case {
   z-index: inherit;
-
-  /* background-repeat: no-repeat; */
   display: flex;
   flex-flow: row wrap;
   width: 6em;
   height: 6em;
   position: static;
-  /* background-size: contain;
-  content: ""; */
 }
 
 .button {
@@ -94,24 +72,128 @@
   
 }
 
-
-/* .wrapper {
+.sideBar {
   display: flex;
-  z-index: -1;
-  margin-left: auto;
-  margin-right: auto;
-} */
-
-/* #randButton {
-  position: absolute;
-  top: 17.5%;
-  left: 44%;
+  /* flex-flow: column wrap; */
+  flex-direction: column;
+  color: #FFFFFF;
+  width: 6em;
+  font-size: auto;
+  margin: 14px;
+  text-align: center;
+  padding: 2px;
+  
+  background: #232323;
+  /* text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18; */
+  color: #FFFFFF;
+  background: #232323;
   
 }
-
-#addSquares {
+.leftSide {
   position: absolute;
-  top: 17.5%;
-  left: 56.5%;
-} */
+    top: 20px;
+    left: 0px;
+    
+}
+.rightSide {
+  position: absolute;
+    top: 20px;
+    right: 0px;
+}
 
+@-webkit-keyframes sway {
+  0%{
+		top: -20px;
+		-webkit-transform: rotateX(-20deg);
+        transform: rotateX(-20deg);
+}
+
+	3%{
+		 margin-left: -2%;
+		     -webkit-transform: rotateX(-80deg);
+          transform: rotateX(-80deg);
+}
+
+	7% {
+		margin-left:1%;
+		 -webkit-transform: rotateX(-170deg);
+          transform: rotateX(-170deg);
+}
+  10% {
+    margin-left: 2%;
+	  -webkit-transform: rotateX(-230deg);
+          transform: rotateX(-230deg);
+}
+   16% {
+   		margin-left: 5%;
+   	    	  -webkit-transform: rotateX(-250deg);
+          transform: rotateX(-250deg);
+}
+   22% {
+   	 margin-left: 3%;
+   		    -webkit-transform: rotateX(-280deg);
+          transform: rotateX(-280deg);
+}
+
+  28% {
+    margin-left: 0%;
+    	  -webkit-transform: rotateX(-300deg);
+          transform: rotateX(-300deg);
+}
+
+  35% {
+  	margin-left: 3.5%;
+  	  -webkit-transform: rotateX(-310deg);
+          transform: rotateX(-310deg);
+}
+
+  48% {
+    margin-left: 1%;
+     -webkit-transform: rotateX(-350deg);
+          transform: rotateX(-350deg);
+}
+
+   58% {
+   	margin-left: 3.5%;
+   	 -webkit-transform: rotateX(-310deg);
+          transform: rotateX(-310deg);
+}
+
+   70%{
+   		margin-left: 0.5%;
+   	   	 -webkit-transform: rotateX(-280deg);
+          transform: rotateX(-280deg);
+}
+
+  83% {
+    margin-left: -2%;
+     -webkit-transform: rotateX(-230deg);
+          transform: rotateX(-230deg);
+
+}
+
+  95% {
+    margin-left: 2%;
+  -webkit-transform: rotateX(-200deg);
+          transform: rotateX(-200deg);
+}
+
+  100% {
+    margin-left: 3%;
+    top: 100%; 
+  } 
+}
+
+span.bills { //change this when reusing rain code
+  padding: 5px;
+  display: block;
+  position: absolute;
+  z-index: 100;
+  -webkit-animation: sway 30s ease-out;
+  animation: sway 30s ease-out;
+}
+
+span.bills img {
+  width: 5em;
+  height: auto;
+}
