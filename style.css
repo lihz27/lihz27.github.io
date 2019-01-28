@@ -1,0 +1,117 @@
+
+
+.container {
+  display: flex;
+  justify-content: left;
+  flex-flow: row wrap;
+  z-index: 2;
+
+  border: solid;
+  border-color: black;
+  width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+  /* position: relative; */
+  
+}
+
+.overlay {
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
+
+.cases {
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  overflow: hidden;
+  opacity: 0;
+  /* -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+   user-select: none; */
+}
+
+#test {
+  position: absolute;
+  left: 10;
+  top: 10;
+  z-index: -1;
+  opacity: 0;
+}
+
+.rectangle {
+  z-index: inherit;
+  display: flex;
+  width: 6em;
+  height: 6em;
+  background: blue;
+  overflow: hidden;   /*adding for sliding effect*/
+  /* -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+   user-select: none; */
+}
+
+
+.pictures {
+  display: flex;
+  flex-flow: row wrap;
+  z-index: 3;
+  
+  justify-content: left;
+  width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.case {
+  z-index: inherit;
+
+  /* background-repeat: no-repeat; */
+  display: flex;
+  flex-flow: row wrap;
+  width: 6em;
+  height: 6em;
+  position: static;
+  /* background-size: contain;
+  content: ""; */
+}
+
+.button {
+  display: flex;
+  flex-flow: row wrap;
+  width: 30em;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+
+/* .wrapper {
+  display: flex;
+  z-index: -1;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/* #randButton {
+  position: absolute;
+  top: 17.5%;
+  left: 44%;
+  
+}
+
+#addSquares {
+  position: absolute;
+  top: 17.5%;
+  left: 56.5%;
+} */
+
